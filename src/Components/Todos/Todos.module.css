@@ -1,0 +1,74 @@
+.todos-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  list-style: none;
+  height: 40rem;
+  max-height: 40rem;
+  overflow-y: auto;
+}
+
+.todos-item {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-light);
+  border-radius: var(--border);
+  padding: 0.7rem;
+  gap: var(--gap-5);
+  cursor: pointer;
+  position: relative;
+}
+
+.todos-item span:first-of-type {
+  margin-right: auto;
+}
+
+.todo {
+  font-size: 1.4rem;
+}
+
+.date {
+  display: inline-block;
+  height: 100%;
+  background-color: var(--color-dark);
+  border-radius: 5px;
+  padding: 0.2rem 0.5rem;
+  font-size: 1.3rem;
+  color: var(--color-black-06);
+}
+
+button {
+  display: block;
+  border: none;
+  background-color: var(--color-dark);
+  padding: 0.3rem 0.8rem;
+  border-radius: var(--border-small);
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.option-delete {
+  position: absolute;
+  right: 0.5rem;
+  top: 3rem;
+  z-index: 100;
+}
+
+.option-delete ul {
+  list-style: none;
+  background-color: var(--color-light);
+  font-size: 1.1rem;
+}
+
+.option-delete ul li {
+  padding: 1rem;
+}
+
+.option-delete ul li:hover {
+  background-color: var(--color-dark);
+}
+
+.btn-deleteAll {
+  background-color: var(--color-light);
+  padding: 0.5rem 1.5rem;
+}

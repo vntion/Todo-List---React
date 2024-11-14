@@ -1,0 +1,6 @@
+.app-layout {
+  display: grid;
+  grid-template-columns: 33rem 1fr;
+  height: 100vh;
+  padding: 1rem;
+}

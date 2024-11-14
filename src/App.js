@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import AppLayout from './Pages/AppLayout/AppLayout';
+import PageNotFound from './Pages/PageNotFound/PageNotFound';
+import { TodoListProvider } from './Context/TodoListContext';
+import Todos from './Components/Todos/Todos';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <TodoListProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<AppLayout />}>
+            <Route index element={<Navigate to="home" />} />
+            <Route path="home" element={<Todos />} />
+            <Route path="completed" element={<Todos category="Completed" />} />
+            <Route path="personal" element={<Todos category="Personal" />} />
+            <Route path="work" element={<Todos category="Work" />} />
+            <Route path="wishlist" element={<Todos category="Wishlist" />} />
+          </Route>
+          <Route path="*" element={<PageNotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </TodoListProvider>
   );
 }
 

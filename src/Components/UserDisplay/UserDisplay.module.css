@@ -1,0 +1,13 @@
+.user-display {
+  margin-bottom: 2rem;
+}
+
+.message {
+  font-size: 2.5rem;
+  letter-spacing: 0.15rem;
+}
+
+time {
+  font-size: 1.4rem;
+  color: var(--color-black-06);
+}

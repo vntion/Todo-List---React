@@ -1,0 +1,11 @@
+.sidebar {
+  background-color: var(--color-light);
+  border-radius: var(--border);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+  padding: calc(5rem - 0.5rem) 1rem;
+}
+
+.heading {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}

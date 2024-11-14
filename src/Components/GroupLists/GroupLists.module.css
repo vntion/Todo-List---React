@@ -1,0 +1,12 @@
+.group {
+  position: absolute;
+  right: 11rem;
+  top: 8rem;
+}
+
+.group select {
+  border: none;
+  border-radius: var(--border);
+  font-weight: bolder;
+  padding: 0.5rem;
+}
